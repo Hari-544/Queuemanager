@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QueueEase public display board - now serving tokens. Demo only.">
+  <title>QueueEase - Now serving display</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip_link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">QE</span>
+        <span>QueueEase<small data-i18n="brand_sub">Less waiting. Better service.</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav_citizen">Citizen</a>
+        <a href="staff.html" data-i18n="nav_staff">Staff demo</a>
+        <a href="display.html" aria-current="page" data-i18n="nav_display">Display board</a>
+        <div class="lang-switch" role="group" aria-label="Language / భాష">
+          <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang-btn="te" aria-pressed="false">తెలుగు</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="demo-banner" role="note">
+    <div class="wrap">
+      <span class="demo-tag" data-i18n="banner_tag">Demo prototype</span>
+      <span data-i18n="banner_text">Demonstration only. No real appointment is confirmed. Data stays in this browser. Do not enter Aadhaar, ID numbers or sensitive details.</span>
+    </div>
+  </div>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <section aria-labelledby="display-title">
+      <div class="eyebrow" data-i18n="display_eyebrow">Public display</div>
+      <h1 id="display-title" data-i18n="display_title">Now serving</h1>
+      <p class="muted" data-i18n="display_sub">Live counter display for the demo queues. Refreshes automatically.</p>
+      <div class="row">
+        <div class="field" style="flex:1 1 240px; max-width:340px">
+          <label for="display-office" data-i18n="f_office_f">Office</label>
+          <select id="display-office"></select>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px"><small data-i18n="display_auto">Auto-refreshes every 10 seconds.</small> <small id="display-updated" aria-live="polite"></small></p>
+    </section>
+
+    <section aria-labelledby="serving-title">
+      <h2 id="serving-title" class="sr-only">Serving</h2>
+      <div class="serve-board" id="serve-list" aria-live="polite"></div>
+    </section>
+
+    <section aria-labelledby="waiting-title">
+      <h2 id="waiting-title" data-i18n="display_waiting_title">Waiting today</h2>
+      <div class="wait-list" id="wait-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>QueueEase</strong> - <span data-i18n="brand_sub">Less waiting. Better service.</span></p>
+      <p data-i18n="foot_storage">Demo data is stored only in this browser (local storage) and does not sync between users or devices.</p>
+      <p data-i18n="foot_nogov">A student prototype. Not affiliated with, endorsed or approved by any government department.</p>
+    </div>
+  </footer>
+
+  <div class="toast-region" id="toasts" aria-hidden="false"></div>
+  <div class="sr-only" id="live-region" aria-live="polite"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/queue.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/display.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "queueease-csi",
+  "version": "2.0.0",
+  "description": "QueueEase - Online Appointment & Queue Management System (CSI demo: static frontend + Node/SQLite backend, zero dependencies)",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "start:static": "node server.js",
+    "test": "node tests/run-tests.js",
+    "test:e2e": "node tests/e2e.js",
+    "test:e2e-server": "node tests/e2e-server.js",
+    "check": "node --check assets/js/config.js && node --check assets/js/queue.js && node --check assets/js/storage.js && node --check assets/js/i18n.js && node --check assets/js/ui.js && node --check assets/js/api.js && node --check assets/js/citizen.js && node --check assets/js/staff.js && node --check assets/js/display.js && node --check assets/js/completed.js && node --check assets/js/reports.js && node --check server/env.js && node --check server/db.js && node --check server/auth.js && node --check server/auth-crypto.js && node --check server/api.js && node --check server/index.js && node --check server.js && node --check tests/run-tests.js && node --check tests/queue.test.js && node --check tests/storage.test.js && node --check tests/verify-pages.js && node --check tests/api.test.js && node --check tests/cdp-helper.js && node --check tests/e2e.js && node --check tests/e2e-server.js && echo OK"
+  },
+  "license": "MIT"
+}

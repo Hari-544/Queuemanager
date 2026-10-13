@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QueueEase operations reporting for authorized staff.">
+  <title>QueueEase - Operations reports</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">QE</span><span>QueueEase<small>Less waiting. Better service.</small></span></a>
+      <div class="nav-links">
+        <a href="staff.html">Active Queue</a>
+        <a href="completed.html">Completed Tokens</a>
+        <a href="reports.html" aria-current="page">Reports</a>
+        <button type="button" id="logout-btn" class="hide">Logout</button>
+      </div>
+    </nav>
+  </header>
+  <div class="demo-banner"><div class="wrap"><span class="demo-tag">Operations</span><span>Aggregated service metrics only. Personal citizen details are not shown in reports.</span></div></div>
+  <main id="main" class="wrap" tabindex="-1">
+    <section aria-labelledby="title">
+      <div class="eyebrow">Management overview</div>
+      <h1 id="title">Operations reports</h1>
+      <p class="muted">Use the reporting view to understand service demand and counter performance.</p>
+      <div id="auth-error" class="notice notice-danger hide" role="alert"></div>
+    </section>
+    <section id="report-section" class="hide" aria-labelledby="report-title">
+      <div class="section-head">
+        <div><h2 id="report-title">Queue performance</h2><p class="muted" id="report-period"></p></div>
+        <div class="row">
+          <label class="field-inline">From <input type="date" id="from-date"></label>
+          <label class="field-inline">To <input type="date" id="to-date"></label>
+          <button type="button" class="btn btn-secondary btn-sm" id="refresh-btn">Refresh</button>
+        </div>
+      </div>
+      <div id="report-error" class="notice notice-danger hide" role="alert"></div>
+      <div id="report-loading" class="notice notice-info hide" aria-live="polite">Loading report…</div>
+      <div class="grid grid-4 report-kpis" id="report-kpis"></div>
+      <div class="grid grid-2 report-panels">
+        <div class="panel">
+          <h3>Office performance</h3>
+          <div class="table-scroll"><table>
+            <thead><tr><th>Office</th><th>Tokens</th><th>Completed</th><th>Completion rate</th><th>Avg service</th></tr></thead>
+            <tbody id="office-report"></tbody>
+          </table></div>
+        </div>
+        <div class="panel">
+          <h3>Daily demand</h3>
+          <div id="daily-report" class="report-bars" aria-label="Daily token volume"></div>
+          <p id="daily-empty" class="muted hide">No token activity in this range.</p>
+        </div>
+      </div>
+      <p class="muted report-footnote">Generated <span id="generated-at"></span>. Average service time is calculated only from records with both serving and completion timestamps.</p>
+    </section>
+  </main>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/queue.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/reports.js"></script>
+</body>
+</html>

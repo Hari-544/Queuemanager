@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QueueEase completed token records for authorized staff.">
+  <title>QueueEase - Completed Tokens</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">QE</span><span>QueueEase<small>Less waiting. Better service.</small></span></a>
+      <div class="nav-links">
+        <a href="staff.html">Active Queue</a>
+        <a href="completed.html" aria-current="page">Completed Tokens</a>
+        <a href="reports.html">Reports</a>
+        <button type="button" id="logout-btn" class="hide">Logout</button>
+      </div>
+    </nav>
+  </header>
+  <div class="demo-banner"><div class="wrap"><span class="demo-tag">Staff records</span><span>Authorized access only. Completed records are retained for operational history.</span></div></div>
+  <main id="main" class="wrap" tabindex="-1">
+    <section aria-labelledby="title">
+      <div class="eyebrow">Operations</div>
+      <h1 id="title">Completed Tokens</h1>
+      <p class="muted">Search and review completed tokens without loading the entire history into the browser.</p>
+      <div id="auth-error" class="notice notice-danger hide" role="alert"></div>
+    </section>
+    <section id="records" aria-labelledby="records-title" class="hide">
+      <div class="section-head">
+        <div><h2 id="records-title">Completed records</h2><p class="muted" id="count-line" aria-live="polite"></p></div>
+        <button type="button" class="btn btn-secondary btn-sm" id="refresh-btn">Refresh</button>
+      </div>
+      <div class="filter-bar" role="search" aria-label="Completed token filters">
+        <div class="field"><label for="office-filter">Office</label><select id="office-filter"></select></div>
+        <div class="field"><label for="service-filter">Service</label><select id="service-filter"></select></div>
+        <div class="field"><label for="from-filter">From</label><input type="date" id="from-filter"></div>
+        <div class="field"><label for="to-filter">To</label><input type="date" id="to-filter"></div>
+        <div class="field"><label for="search-filter">Search token or reference</label><input type="search" id="search-filter" autocomplete="off"></div>
+      </div>
+      <div id="loading" class="notice notice-info hide" aria-live="polite">Loading completed tokens…</div>
+      <div id="error" class="notice notice-danger hide" role="alert"></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Token</th><th>Reference</th><th>Office / service</th><th>Appointment</th><th>Created</th><th>Completed</th><th>Status</th></tr></thead>
+          <tbody id="completed-list"></tbody>
+        </table>
+      </div>
+      <div id="empty" class="empty hide"><h3>No completed tokens found</h3><p>Try changing the filters or complete a token from the active queue.</p></div>
+      <div class="section-head" style="margin-top:14px">
+        <span id="page-line" class="muted"></span>
+        <div class="row"><button type="button" class="btn btn-ghost btn-sm" id="prev-btn">Previous</button><button type="button" class="btn btn-secondary btn-sm" id="next-btn">Next</button></div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/queue.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/completed.js"></script>
+</body>
+</html>

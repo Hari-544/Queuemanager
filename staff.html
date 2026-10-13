@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QueueEase staff operations dashboard for managing active service tokens.">
+  <title>QueueEase - Active queue</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip_link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">QE</span>
+        <span>QueueEase<small data-i18n="brand_sub">Less waiting. Better service.</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav_citizen">Citizen</a>
+        <a href="staff.html" aria-current="page" data-i18n="nav_staff">Active Queue</a>
+        <a href="completed.html">Completed Tokens</a>
+        <a href="reports.html">Reports</a>
+        <a href="display.html" data-i18n="nav_display">Display board</a>
+        <div class="lang-switch" role="group" aria-label="Language / భాష">
+          <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang-btn="te" aria-pressed="false">తెలుగు</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="demo-banner" role="note">
+    <div class="wrap">
+      <span class="demo-tag" data-i18n="banner_tag">Demo prototype</span>
+      <span data-i18n="banner_text">Demonstration only. No real appointment is confirmed. Data stays in this browser. Do not enter Aadhaar, ID numbers or sensitive details.</span>
+    </div>
+  </div>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <section aria-labelledby="staff-title">
+      <div class="eyebrow" data-i18n="staff_eyebrow">Service provider tools</div>
+      <h1 id="staff-title" data-i18n="staff_title">Active queue operations</h1>
+      <p class="muted" data-i18n="staff_sub">Call tokens, update statuses and watch the queue move.</p>
+      <div class="notice notice-warn" role="note"><strong>Training environment -</strong> <span data-i18n="staff_demo_warn">This project uses fictional data for demonstration. Use a managed deployment and real staff accounts before handling live queues.</span></div>
+    </section>
+
+    <!-- Summary -->
+    <section aria-labelledby="summary-title">
+      <h2 id="summary-title" class="sr-only">Summary</h2>
+      <div class="grid grid-3" id="summary-cards" role="list"></div>
+      <p class="muted" style="margin-top:8px"><small data-i18n="summary_all_note">Counts across every demo record in this browser.</small></p>
+    </section>
+
+    <!-- Sign-in (visible when a demo server is connected) -->
+    <section aria-labelledby="auth-title" id="auth-section" class="hide">
+      <div class="panel">
+        <h2 id="auth-title" style="font-size:1.1rem" data-i18n="auth_title">Staff sign-in</h2>
+        <p class="muted" data-i18n="auth_sub">Sign in to manage the demo queue. Sessions last 12 hours.</p>
+        <div id="auth-signed-out">
+          <form id="auth-form" class="form-grid" novalidate>
+            <div class="form-error" id="auth-error" role="alert" tabindex="-1"></div>
+            <div class="row">
+              <div class="field" style="flex:1 1 200px; min-width:180px">
+                <label for="auth-user" data-i18n="auth_user">Username</label>
+                <input type="text" id="auth-user" autocomplete="username">
+              </div>
+              <div class="field" style="flex:1 1 200px; min-width:180px">
+                <label for="auth-pass" data-i18n="auth_pass">Password</label>
+                <input type="password" id="auth-pass" autocomplete="current-password">
+              </div>
+              <div class="field" style="flex:0 0 auto; justify-content:flex-end">
+                <span class="field-label" aria-hidden="true">&nbsp;</span>
+                <button type="submit" class="btn btn-primary" id="auth-btn" data-i18n="auth_btn">Sign in</button>
+              </div>
+            </div>
+            <p class="muted"><small data-i18n="auth_demo_hint">Demo accounts (change via .env for real use): staff / staff-demo-123, admin / admin-demo-123.</small></p>
+          </form>
+        </div>
+        <div id="auth-signed-in" class="hide">
+          <p><span id="auth-status"></span></p>
+          <button type="button" class="btn btn-ghost btn-sm" id="logout-btn" data-i18n="auth_logout">Sign out</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call next -->
+    <section aria-labelledby="call-title">
+      <div class="panel">
+        <h2 id="call-title" style="font-size:1.1rem"><span aria-hidden="true">📢 </span><span data-i18n="call_next">Call next token</span></h2>
+        <p class="muted" data-i18n="call_for">Call next for the selected office and date</p>
+        <div class="form-grid" style="grid-template-columns:1fr; gap:10px">
+          <div class="row">
+            <div class="field" style="flex:1 1 220px; min-width:200px">
+              <label for="call-office" data-i18n="f_office_f">Office</label>
+              <select id="call-office"></select>
+            </div>
+            <div class="field" style="flex:0 1 200px; min-width:160px">
+              <label for="call-date" data-i18n="f_date_f">Date</label>
+              <input type="date" id="call-date">
+            </div>
+            <div class="field" style="flex:0 0 auto; justify-content:flex-end">
+              <span class="field-label" aria-hidden="true">&nbsp;</span>
+              <button type="button" class="btn btn-primary" id="call-btn" data-i18n="call_next">Call next token</button>
+            </div>
+          </div>
+          <div id="call-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters + list -->
+    <section aria-labelledby="list-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-i18n="filters_title">Filters</div>
+          <h2 id="list-title" data-i18n="list_title">Queue entries</h2>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-secondary btn-sm" id="export-csv" data-i18n="btn_export_csv">Export CSV</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="export-json" data-i18n="btn_export_json">Export JSON</button>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="search" aria-label="Queue filters">
+        <div class="field">
+          <label for="flt-office" data-i18n="f_office_f">Office</label>
+          <select id="flt-office"></select>
+        </div>
+        <div class="field">
+          <label for="flt-service" data-i18n="f_service_f">Service</label>
+          <select id="flt-service"></select>
+        </div>
+        <div class="field">
+          <label for="flt-status" data-i18n="f_status_f">Status</label>
+          <select id="flt-status"></select>
+        </div>
+        <div class="field">
+          <label for="flt-channel" data-i18n="f_channel">Visit type</label>
+          <select id="flt-channel"></select>
+        </div>
+        <div class="field">
+          <label for="flt-date" data-i18n="f_date_f">Date</label>
+          <input type="date" id="flt-date">
+        </div>
+        <div class="field">
+          <label for="flt-search" data-i18n="f_search">Search</label>
+          <input type="search" id="flt-search" autocomplete="off" spellcheck="false" data-i18n-ph="search_ph" placeholder="Token, reference or name">
+        </div>
+        <div class="field" style="justify-content:flex-end">
+          <span class="field-label" aria-hidden="true">&nbsp;</span>
+          <button type="button" class="btn btn-ghost btn-sm" id="flt-clear" data-i18n="btn_clear_filters">Clear filters</button>
+        </div>
+      </div>
+
+      <p class="muted" style="margin:12px 0 8px" id="showing-line" aria-live="polite"></p>
+      <div class="stack" id="queue-list"></div>
+    </section>
+
+    <!-- Tools -->
+    <section aria-labelledby="tools-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Demo</div>
+          <h2 id="tools-title" data-i18n="tools_title">Demo tools</h2>
+        </div>
+      </div>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3 data-i18n="walkin_title">Create a walk-in token</h3>
+          <p class="muted" data-i18n="walkin_sub">Issued for today at the selected office. No date or slot needed.</p>
+          <form id="walkin-form" class="form-grid" novalidate>
+            <div class="form-error" id="walkin-errors" role="alert" tabindex="-1"></div>
+            <div class="field">
+              <label for="w-office" data-i18n="f_office_f">Office</label>
+              <select id="w-office"></select>
+            </div>
+            <div class="field">
+              <label for="w-service" data-i18n="f_service_f">Service</label>
+              <select id="w-service"></select>
+            </div>
+            <div class="field">
+              <label for="w-name" data-i18n="f_name">Display name or alias</label>
+              <input type="text" id="w-name" maxlength="40" autocomplete="off" data-i18n-ph="name_ph" placeholder="e.g. Anitha">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-teal" id="walkin-submit" data-i18n="btn_walkin_new">New walk-in token</button>
+            </div>
+          </form>
+          <div id="walkin-result" aria-live="polite" style="margin-top:10px"></div>
+        </div>
+
+        <div class="stack">
+          <div class="panel">
+            <h3 data-i18n="settings_title">Demo settings</h3>
+            <p class="muted" data-i18n="settings_sub">Average service time drives the illustrative wait estimate. Changes apply to new estimates only.</p>
+            <div class="form-grid" id="avg-fields"></div>
+            <div class="form-actions" style="margin-top:10px">
+              <button type="button" class="btn btn-secondary btn-sm" id="settings-save" data-i18n="btn_save_settings">Save settings</button>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="btn_reset">Reset demo data</h3>
+            <div class="field" style="margin:8px 0">
+              <label style="display:flex; gap:8px; align-items:flex-start; font-weight:500">
+                <input type="checkbox" id="reset-reseed" checked style="width:auto; min-height:auto; margin-top:4px">
+                <span data-i18n="btn_load_demo">Load sample demo data</span>
+              </label>
+            </div>
+            <button type="button" class="btn btn-danger btn-sm" id="reset-btn" data-i18n="btn_reset">Reset demo data</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Administration (administrators only, server mode) -->
+    <section aria-labelledby="admin-title" id="admin-section" class="hide">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Admin</div>
+          <h2 id="admin-title" data-i18n="admin_title">Administration</h2>
+          <p class="muted" data-i18n="admin_sub">Staff accounts and audit log. Administrators only.</p>
+        </div>
+      </div>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3 data-i18n="admin_users">Staff accounts</h3>
+          <div class="table-scroll"><table>
+            <thead><tr>
+              <th data-i18n="col_username">Username</th><th data-i18n="col_role">Role</th>
+              <th data-i18n="col_created">Created</th><th data-i18n="th_status">Status</th><th data-i18n="th_actions">Actions</th>
+            </tr></thead>
+            <tbody id="admin-users"></tbody>
+          </table></div>
+          <h3 style="margin-top:14px" data-i18n="admin_new">New staff account</h3>
+          <form id="admin-user-form" class="form-grid" novalidate>
+            <div class="form-error" id="admin-user-error" role="alert" tabindex="-1"></div>
+            <div class="field">
+              <label for="new-username" data-i18n="auth_user">Username</label>
+              <input type="text" id="new-username" autocomplete="off" maxlength="32">
+            </div>
+            <div class="field">
+              <label for="new-password" data-i18n="auth_pass">Password</label>
+              <input type="password" id="new-password" autocomplete="new-password">
+            </div>
+            <div class="field">
+              <label for="new-role" data-i18n="admin_role">Role</label>
+              <select id="new-role">
+                <option value="staff" data-i18n="role_staff">Staff</option>
+                <option value="admin" data-i18n="role_admin">Administrator</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-secondary btn-sm" data-i18n="admin_create">Create account</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="admin_audit">Audit log</h3>
+          <div class="table-scroll"><table>
+            <thead><tr>
+              <th data-i18n="col_when">When</th><th data-i18n="col_actor">Who</th>
+              <th data-i18n="col_action">Action</th><th data-i18n="col_detail">Details</th>
+            </tr></thead>
+            <tbody id="admin-audit"></tbody>
+          </table></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>QueueEase</strong> - <span data-i18n="brand_sub">Less waiting. Better service.</span></p>
+      <p data-i18n="foot_about">QueueEase is a Community Service Internship (CSI) demonstration for public-service queue management. No real-provider pilot or measured impact is claimed.</p>
+      <p data-i18n="foot_storage">Demo data is stored only in this browser (local storage) and does not sync between users or devices.</p>
+      <p data-i18n="foot_nogov">A student prototype. Not affiliated with, endorsed or approved by any government department.</p>
+    </div>
+  </footer>
+
+  <div class="toast-region" id="toasts" aria-hidden="false"></div>
+  <div class="sr-only" id="live-region" aria-live="polite"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/queue.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/staff.js"></script>
+</body>
+</html>
