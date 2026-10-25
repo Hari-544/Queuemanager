@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="QueueEase - demo appointment and queue tokens for public-service counters. Less waiting. Better service.">
-  <title>QueueEase - Book a demo appointment</title>
+  <meta name="description" content="QueueManager - appointment and queue tokens for public-service counters. Less waiting. Better service.">
+  <title>QueueManager - Book a appointment</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,14 +13,14 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">QE</span>
-        <span>QueueEase<small data-i18n="brand_sub">Less waiting. Better service.</small></span>
+        <span class="brand-mark" aria-hidden="true">QM</span>
+        <span>QueueManager<small data-i18n="brand_sub">Less waiting. Better service.</small></span>
       </a>
       <div class="nav-links">
         <a href="index.html" aria-current="page" data-i18n="nav_citizen">Citizen</a>
         <a href="#book" data-i18n="nav_book">Book</a>
         <a href="#mytokens" data-i18n="nav_mytokens">My tokens</a>
-        <a href="staff.html" data-i18n="nav_staff">Staff demo</a>
+        <a href="staff.html" data-i18n="nav_staff">Staff</a>
         <a href="display.html" data-i18n="nav_display">Display board</a>
         <div class="lang-switch" role="group" aria-label="Language / భాష">
           <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
@@ -30,26 +30,17 @@
     </nav>
   </header>
 
-  <div class="demo-banner" role="note">
-    <div class="wrap">
-      <span class="demo-tag" data-i18n="banner_tag">Demo prototype</span>
-      <span data-i18n="banner_text">Demonstration only. No real appointment is confirmed. Data stays in this browser. Do not enter Aadhaar, ID numbers or sensitive details.</span>
-    </div>
-  </div>
-
   <main id="main" class="wrap" tabindex="-1">
     <!-- Hero -->
     <section aria-labelledby="hero-title">
       <div class="hero">
         <div>
-          <div class="eyebrow" data-i18n="hero_eyebrow">Community Service Internship demonstration</div>
           <h1 id="hero-title" data-i18n="hero_title">Book a token. Skip the long queue.</h1>
-          <p class="lead" data-i18n="hero_lead">Choose a demo service counter, pick a date and time slot, and receive a queue token. Follow your status online instead of standing in line.</p>
+          <p class="lead" data-i18n="hero_lead">Choose a service counter, pick a date and time slot, and receive a queue token. Follow your status online instead of standing in line.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#book" data-i18n="hero_cta_book">Book an appointment</a>
-            <a class="btn btn-secondary" href="staff.html" data-i18n="hero_cta_staff">Open staff demo</a>
+            <a class="btn btn-secondary" href="staff.html" data-i18n="hero_cta_staff">Open staff</a>
           </div>
-          <p class="muted" style="margin-top:10px"><small data-i18n="hero_storage_note">Saved only in this browser. Demo queues do not sync between phones or computers.</small></p>
         </div>
         <div class="hero-art" aria-hidden="true">🎟️ ⏱️ 🏢</div>
       </div>
@@ -64,15 +55,15 @@
         <div class="stat is-completed" role="listitem"><span class="stat-value" id="stat-completed">0</span><span class="stat-label" data-i18n="stat_completed">Completed</span></div>
         <div class="stat" role="listitem"><span class="stat-value" id="stat-total">0</span><span class="stat-label" data-i18n="stat_total">Tokens today</span></div>
       </div>
-      <p class="muted" style="margin-top:8px"><small data-i18n="stats_today_note">Counts for today across all demo counters.</small></p>
+      <p class="muted" style="margin-top:8px"><small data-i18n="stats_today_note">Counts for today across all counters.</small></p>
     </section>
 
     <!-- Offices -->
     <section id="offices" aria-labelledby="offices-title">
       <div class="section-head">
         <div>
-          <div class="eyebrow" data-i18n="offices_eyebrow">Demo counters</div>
-          <h2 id="offices-title" data-i18n="offices_title">Choose a demo office</h2>
+          <div class="eyebrow" data-i18n="offices_eyebrow">Counters</div>
+          <h2 id="offices-title" data-i18n="offices_title">Choose an office</h2>
           <p class="muted" data-i18n="offices_sub">Four fictional public-service counters for demonstration. Real offices are not connected.</p>
         </div>
       </div>
@@ -84,7 +75,7 @@
       <div class="section-head">
         <div>
           <div class="eyebrow" data-i18n="book_eyebrow">Reserve a place</div>
-          <h2 id="book-title" data-i18n="book_title">Book a demo appointment</h2>
+          <h2 id="book-title" data-i18n="book_title">Book a appointment</h2>
           <p class="muted" data-i18n="book_sub">Takes less than a minute. You get a token instantly.</p>
         </div>
       </div>
@@ -187,7 +178,7 @@
       <div class="section-head">
         <div>
           <div class="eyebrow" data-i18n="nav_how">How it works</div>
-          <h2 id="how-title" data-i18n="how_title">How the demo works</h2>
+          <h2 id="how-title" data-i18n="how_title">How the works</h2>
           <p class="muted" data-i18n="how_sub">Follow these steps to try the full citizen-to-staff flow.</p>
         </div>
       </div>
@@ -196,7 +187,7 @@
           <li data-i18n="step1">Open the citizen page and choose an office and service.</li>
           <li data-i18n="step2">Pick a date and an available time slot.</li>
           <li data-i18n="step3">Receive a unique token and reference.</li>
-          <li data-i18n="step4">Open the staff demo.</li>
+          <li data-i18n="step4">Open the staff page.</li>
           <li data-i18n="step5">Call the token and change its status.</li>
           <li data-i18n="step6">Complete the appointment.</li>
           <li data-i18n="step7">Watch the dashboard counts update.</li>
@@ -207,10 +198,8 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p><strong>QueueEase</strong> - <span data-i18n="brand_sub">Less waiting. Better service.</span></p>
-      <p data-i18n="foot_about">QueueEase is a Community Service Internship (CSI) demonstration for public-service queue management. No real-provider pilot or measured impact is claimed.</p>
-      <p data-i18n="foot_storage">Demo data is stored only in this browser (local storage) and does not sync between users or devices.</p>
-      <p data-i18n="foot_nogov">A student prototype. Not affiliated with, endorsed or approved by any government department.</p>
+      <p><strong>QueueManager</strong> - <span data-i18n="brand_sub">Less waiting. Better service.</span></p>
+      
     </div>
   </footer>
 
