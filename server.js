@@ -1,4 +1,4 @@
-/* QueueEase - zero-dependency static file server for local demo runs.
+/* QueueManager - zero-dependency static file server for local demo runs.
  * Usage:  node server.js [port]      (default port 8080)
  * Serves the project directory so index.html and staff.html work over
  * http://localhost:8080 instead of file:// (recommended for localStorage).
@@ -57,8 +57,8 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log('QueueEase demo running at http://localhost:' + PORT + '/');
+  console.log('QueueManager running at http://localhost:' + PORT + '/');
   console.log('Citizen page: http://localhost:' + PORT + '/index.html');
-  console.log('Staff demo:   http://localhost:' + PORT + '/staff.html');
+  console.log('Staff page:   http://localhost:' + PORT + '/staff.html');
   console.log('Press Ctrl+C to stop.');
 });

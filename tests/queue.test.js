@@ -1,4 +1,4 @@
-/* QueueEase - queue engine tests (pure logic, no DOM). */
+/* QueueManager - queue engine tests (pure logic, no DOM). */
 'use strict';
 
 const CFG = require('../assets/js/config.js');

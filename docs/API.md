@@ -1,4 +1,4 @@
-# QueueEase API reference
+# QueueManager API reference
 
 Base URL is the same origin that serves the app (no CORS needed):
 `http://localhost:8080/api/...`. All bodies and responses are JSON, except

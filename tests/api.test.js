@@ -1,4 +1,4 @@
-/* QueueEase - backend API tests (real HTTP against server/index.js).
+/* QueueManager - backend API tests (real HTTP against server/index.js).
  * Spawns the backend on a test port with an isolated temp database file.
  * Skipped gracefully only if the server cannot boot (reported as failure).
  */

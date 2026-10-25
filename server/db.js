@@ -1,4 +1,4 @@
-/* QueueEase backend - SQLite persistence (node:sqlite, stdlib).
+/* QueueManager backend - SQLite persistence (node:sqlite, stdlib).
  *
  * One file database, ACID transactions, UNIQUE constraints. Token allocation
  * and status changes run inside IMMEDIATE transactions behind an async mutex,

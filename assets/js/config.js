@@ -1,5 +1,5 @@
 /*
- * QueueEase - demo configuration (offices, services, scheduling rules).
+ * QueueManager - demo configuration (offices, services, scheduling rules).
  * Environment agnostic: safe to load in the browser (window.QE_CONFIG)
  * and in Node (module.exports) so the same rules drive the UI and tests.
  */

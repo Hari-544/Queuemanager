@@ -1,5 +1,5 @@
 /*
- * QueueEase - queue logic (no DOM, no storage access).
+ * QueueManager - queue logic (no DOM, no storage access).
  *
  * Every function receives the in-memory `state` object so the exact same
  * rules can run in the browser and inside the Node test-suite.  The storage

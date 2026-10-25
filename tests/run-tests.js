@@ -1,4 +1,4 @@
-/* QueueEase - zero-dependency test runner. Usage: node tests/run-tests.js
+/* QueueManager - zero-dependency test runner. Usage: node tests/run-tests.js
  * Test functions may be sync or async (async is awaited).
  */
 'use strict';

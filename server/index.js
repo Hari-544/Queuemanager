@@ -1,4 +1,4 @@
-/* QueueEase backend - entry point.
+/* QueueManager backend - entry point.
  * Serves the frontend statically AND the JSON API from one origin, so the
  * browser app talks to the backend with same-origin fetch (no CORS needed).
  *
@@ -149,7 +149,7 @@ function main() {
   if (purgeTimer.unref) { purgeTimer.unref(); }
 
   server.listen(env.PORT, env.HOST, () => {
-    log('QueueEase backend listening on http://' + env.HOST + ':' + env.PORT + '/');
+    log('QueueManager backend listening on http://' + env.HOST + ':' + env.PORT + '/');
     log('citizen: http://localhost:' + env.PORT + '/index.html');
     log('staff:   http://localhost:' + env.PORT + '/staff.html');
     log('display: http://localhost:' + env.PORT + '/display.html');

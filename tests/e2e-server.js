@@ -1,4 +1,4 @@
-/* QueueEase - backend integration E2E (no npm dependencies).
+/* QueueManager - backend integration E2E (no npm dependencies).
  * Serves the app from server/index.js and drives the real UI in server mode:
  * citizen booking (API) -> staff sign-in -> call-next -> display board ->
  * complete -> counts -> admin panel -> logout lockout.

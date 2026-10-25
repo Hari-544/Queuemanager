@@ -56,7 +56,7 @@
 
   API.detect().then(function (mode) {
     if (mode !== 'server') {
-      byId('auth-error').textContent = 'Reports require the QueueEase server. Start the backend and sign in from Staff.';
+      byId('auth-error').textContent = 'Reports require the QueueManager server. Start the backend and sign in from Staff.';
       setHidden('auth-error', false);
       return;
     }

@@ -1,4 +1,4 @@
-/* QueueEase - staff demonstration dashboard. */
+/* QueueManager - staff demonstration dashboard. */
 (function () {
   'use strict';
 
@@ -530,7 +530,7 @@
         officeId: filters.officeId, serviceId: filters.serviceId, status: filters.status,
         channel: filters.channel, date: filters.date || undefined, token: filters.q
       }));
-      U.download('queueease-demo-' + stamp() + '.csv', Q.toCSV(rowsCsv), 'text/csv;charset=utf-8');
+      U.download('queuemanager' + stamp() + '.csv', Q.toCSV(rowsCsv), 'text/csv;charset=utf-8');
       U.toast(I.t('msg_EXPORTED', lang, { file: 'CSV', n: rowsCsv.length }), 'success');
     });
     U.byId('export-json').addEventListener('click', function () {
@@ -545,23 +545,14 @@
         channel: filters.channel, date: filters.date || undefined, token: filters.q
       }));
       var payload = {
-        app: 'QueueEase demo prototype',
+        app: 'QueueManager prototype',
         exportedAt: new Date().toISOString(),
         filters: filters,
         entries: rows
       };
-      U.download('queueease-demo-' + stamp() + '.json', JSON.stringify(payload, null, 2), 'application/json;charset=utf-8');
+      U.download('queuemanager' + stamp() + '.json', JSON.stringify(payload, null, 2), 'application/json;charset=utf-8');
       U.toast(I.t('msg_EXPORTED', lang, { file: 'JSON', n: rows.length }), 'success');
     });
-  }
-
-  function loadDemoData() {
-    state = S.reset(adapter, new Date(), true);
-    state.settings = state.settings || {};
-    state.settings.lang = lang;
-    persist();
-    renderAll();
-    U.toast(I.t('msg_DEMO_LOADED', lang), 'success');
   }
 
   function bindReset() {

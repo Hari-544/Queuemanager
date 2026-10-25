@@ -1,7 +1,7 @@
 {
   "name": "queueease-csi",
   "version": "2.0.0",
-  "description": "QueueEase - Online Appointment & Queue Management System (CSI demo: static frontend + Node/SQLite backend, zero dependencies)",
+  "description": "QueueManager - Online Appointment & Queue Management System (CSI demo: static frontend + Node/SQLite backend, zero dependencies)",
   "private": true,
   "scripts": {
     "start": "node server/index.js",

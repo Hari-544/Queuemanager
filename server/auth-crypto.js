@@ -1,4 +1,4 @@
-/* QueueEase backend - password hashing + token helpers (pure crypto).
+/* QueueManager backend - password hashing + token helpers (pure crypto).
  * scrypt with per-password salt; session tokens are random 256-bit values
  * stored hashed (sha256) so a database read alone never yields a session.
  */

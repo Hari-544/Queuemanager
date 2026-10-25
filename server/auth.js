@@ -1,4 +1,4 @@
-/* QueueEase backend - sessions, role checks, rate limiting.
+/* QueueManager backend - sessions, role checks, rate limiting.
  * Cookie sessions (httpOnly, SameSite=Lax). Roles enforced here on every
  * privileged route; the frontend hiding a button is never authorization.
  */

@@ -1,5 +1,5 @@
 /*
- * QueueEase - shared browser UI helpers (toast, dialogs, badges, downloads).
+ * QueueManager - shared browser UI helpers (toast, dialogs, badges, downloads).
  * All user-controlled text is escaped before insertion into HTML strings.
  */
 (function (root) {

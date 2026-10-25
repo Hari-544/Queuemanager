@@ -1,4 +1,4 @@
-# QueueEase — Online Appointment & Queue Management System
+# QueueManager — Online Appointment & Queue Management System
 
 **Tagline: Less waiting. Better service.**
 
@@ -7,7 +7,7 @@ booking and queue management at public-facing service counters in India
 (MeeSeva centres, Gram Panchayat offices, municipal offices and other
 government service counters).
 
-QueueEase runs in **two modes**:
+QueueManager runs in **two modes**:
 
 - **Server mode (recommended):** `npm start` launches the Node.js backend
   with a persistent SQLite database, session authentication for staff,
@@ -28,7 +28,7 @@ Visitors to MeeSeva centres, panchayat offices and municipal counters often
 wait in unmanaged physical queues with no visibility of their turn. Staff
 manage crowds with registers or memory, which causes disputes about order,
 long perceived waiting times and wasted trips when counters are closed.
-QueueEase demonstrates how a simple token + status workflow could organise
+QueueManager demonstrates how a simple token + status workflow could organise
 such queues: citizens take a numbered token, staff call tokens in order, and
 everyone sees the current status.
 
@@ -136,7 +136,7 @@ standalone local mode and citizen offline cache).
 **Option A — full demo (recommended): backend + persistent database**
 
 ```bat
-cd QueueEase_CSI
+cd QueueManager_CSI
 npm start
 ```
 

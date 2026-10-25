@@ -1,5 +1,5 @@
 /*
- * QueueEase - persistence layer.
+ * QueueManager - persistence layer.
  *
  * The browser build uses window.localStorage (per-browser, per-device demo
  * storage).  The adapter is injected, so tests use an in-memory store and a

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="QueueEase staff operations dashboard for managing active service tokens.">
-  <title>QueueEase - Active queue</title>
+  <meta name="description" content="QueueManager staff operations dashboard for managing active service tokens.">
+  <title>QueueManager - Active queue</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">QE</span>
-        <span>QueueEase<small data-i18n="brand_sub">Less waiting. Better service.</small></span>
+        <span class="brand-mark" aria-hidden="true">QM</span>
+        <span>QueueManager<small data-i18n="brand_sub">Less waiting. Better service.</small></span>
       </a>
       <div class="nav-links">
         <a href="index.html" data-i18n="nav_citizen">Citizen</a>
@@ -30,12 +30,7 @@
     </nav>
   </header>
 
-  <div class="demo-banner" role="note">
-    <div class="wrap">
-      <span class="demo-tag" data-i18n="banner_tag">Demo prototype</span>
-      <span data-i18n="banner_text">Demonstration only. No real appointment is confirmed. Data stays in this browser. Do not enter Aadhaar, ID numbers or sensitive details.</span>
-    </div>
-  </div>
+
 
   <main id="main" class="wrap" tabindex="-1">
     <section aria-labelledby="staff-title">
@@ -49,14 +44,14 @@
     <section aria-labelledby="summary-title">
       <h2 id="summary-title" class="sr-only">Summary</h2>
       <div class="grid grid-3" id="summary-cards" role="list"></div>
-      <p class="muted" style="margin-top:8px"><small data-i18n="summary_all_note">Counts across every demo record in this browser.</small></p>
+      <p class="muted" style="margin-top:8px"><small data-i18n="summary_all_note">Counts across every record in this browser.</small></p>
     </section>
 
     <!-- Sign-in (visible when a demo server is connected) -->
     <section aria-labelledby="auth-title" id="auth-section" class="hide">
       <div class="panel">
         <h2 id="auth-title" style="font-size:1.1rem" data-i18n="auth_title">Staff sign-in</h2>
-        <p class="muted" data-i18n="auth_sub">Sign in to manage the demo queue. Sessions last 12 hours.</p>
+        <p class="muted" data-i18n="auth_sub">Sign in to manage the queue. Sessions last 12 hours.</p>
         <div id="auth-signed-out">
           <form id="auth-form" class="form-grid" novalidate>
             <div class="form-error" id="auth-error" role="alert" tabindex="-1"></div>
@@ -161,8 +156,8 @@
     <section aria-labelledby="tools-title">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Demo</div>
-          <h2 id="tools-title" data-i18n="tools_title">Demo tools</h2>
+          <div class="eyebrow">tools</div>
+          <h2 id="tools-title" data-i18n="tools_title">site tools</h2>
         </div>
       </div>
       <div class="grid grid-2">
@@ -192,7 +187,7 @@
 
         <div class="stack">
           <div class="panel">
-            <h3 data-i18n="settings_title">Demo settings</h3>
+            <h3 data-i18n="settings_title">Settings</h3>
             <p class="muted" data-i18n="settings_sub">Average service time drives the illustrative wait estimate. Changes apply to new estimates only.</p>
             <div class="form-grid" id="avg-fields"></div>
             <div class="form-actions" style="margin-top:10px">
@@ -200,14 +195,14 @@
             </div>
           </div>
           <div class="panel">
-            <h3 data-i18n="btn_reset">Reset demo data</h3>
+            <h3 data-i18n="btn_reset">Reset data</h3>
             <div class="field" style="margin:8px 0">
               <label style="display:flex; gap:8px; align-items:flex-start; font-weight:500">
                 <input type="checkbox" id="reset-reseed" checked style="width:auto; min-height:auto; margin-top:4px">
-                <span data-i18n="btn_load_demo">Load sample demo data</span>
+                <span data-i18n="btn_load_demo">Load sample data</span>
               </label>
             </div>
-            <button type="button" class="btn btn-danger btn-sm" id="reset-btn" data-i18n="btn_reset">Reset demo data</button>
+            <button type="button" class="btn btn-danger btn-sm" id="reset-btn" data-i18n="btn_reset">Reset data</button>
           </div>
         </div>
       </div>
@@ -271,10 +266,9 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p><strong>QueueEase</strong> - <span data-i18n="brand_sub">Less waiting. Better service.</span></p>
-      <p data-i18n="foot_about">QueueEase is a Community Service Internship (CSI) demonstration for public-service queue management. No real-provider pilot or measured impact is claimed.</p>
-      <p data-i18n="foot_storage">Demo data is stored only in this browser (local storage) and does not sync between users or devices.</p>
-      <p data-i18n="foot_nogov">A student prototype. Not affiliated with, endorsed or approved by any government department.</p>
+      <p><strong>QueueManager</strong> - <span data-i18n="brand_sub">Less waiting. Better service.</span></p>
+      <p data-i18n="foot_about">QueueManager is a Community Service Internship (CSI) demonstration for public-service queue management. No real-provider pilot or measured impact is claimed.</p>
+      <p data-i18n="foot_copyright">Copyright &copy; 2024, Community Service Internship (CSI) team. All rights reserved.</p>
     </div>
   </footer>
 

@@ -1,4 +1,4 @@
-/* QueueEase - citizen page (booking, confirmation, my tokens, tracking). */
+/* QueueManager - citizen page (booking, confirmation, my tokens, tracking). */
 (function () {
   'use strict';
 
@@ -9,7 +9,7 @@
   var U = window.QEUI;
   var API = window.QEAPI;
 
-  var MINE_KEY = 'queueease.mine.v1';
+  var MINE_KEY = 'queue.mine.v1';
 
   var adapter = null;
   var state = null;
@@ -28,13 +28,14 @@
 
   function showModeBadge() {
     var wrap = document.querySelector('.demo-banner .wrap');
+    if (!wrap) { wrap = document.querySelector('.nav-links'); }
     if (!wrap) { return; }
     var badge = document.getElementById('mode-badge');
     if (!badge) {
       badge = document.createElement('span');
       badge.id = 'mode-badge';
       badge.className = 'badge badge-neutral';
-      badge.style.marginLeft = '4px';
+      badge.style.marginLeft = '8px';
       wrap.appendChild(badge);
     }
     badge.textContent = API.mode === 'unavailable'

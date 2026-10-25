@@ -1,4 +1,4 @@
-/* QueueEase backend - environment loading (stdlib only, no dotenv dependency).
+/* QueueManager backend - environment loading (stdlib only, no dotenv dependency).
  * Reads server/.env or ./.env (never commits secrets; see .env.example).
  * Every value has a safe local default so `node server/index.js` just works.
  */

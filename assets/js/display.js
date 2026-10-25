@@ -1,4 +1,4 @@
-/* QueueEase - public "Now serving" display board (read-only).
+/* QueueManager - public "Now serving" display board (read-only).
  * Refreshes every 10 seconds and instantly on cross-tab storage updates. */
 (function () {
   'use strict';
@@ -10,7 +10,7 @@
   var U = window.QEUI;
   var API = window.QEAPI;
 
-  var OFFICE_KEY = 'queueease.display.office';
+  var OFFICE_KEY = 'queue.display.office';
   var REFRESH_MS = 10000;
   var MAX_SERVING = 8;
   var MAX_WAITING = 12;

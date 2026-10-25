@@ -1,5 +1,5 @@
 /*
- * QueueEase - English / Telugu strings and formatting.
+ * QueueManager - English / Telugu strings and formatting.
  * Plain text only (no HTML) so everything is XSS-safe by construction.
  */
 (function (root, factory) {
@@ -18,32 +18,25 @@
     nav_citizen: { en: 'Citizen', te: 'పౌరులు' },
     nav_book: { en: 'Book', te: 'బుక్' },
     nav_mytokens: { en: 'My tokens', te: 'నా టోకెన్లు' },
-    nav_staff: { en: 'Staff demo', te: 'సిబ్బంది డెమో' },
+    nav_staff: { en: 'Staff page', te: 'సిబ్బంది పేజీ' },
     nav_display: { en: 'Display board', te: 'డిస్‌ప్లే బోర్డు' },
     nav_how: { en: 'How it works', te: 'ఇది ఎలా పనిచేస్తుంది' },
     lang_label: { en: 'Language', te: 'భాష' },
-    doc_title_citizen: { en: 'QueueEase - Book a demo appointment', te: 'క్యూఈజ్ - డెమో అపాయింట్‌మెంట్ బుక్ చేయండి' },
-    doc_title_staff: { en: 'QueueEase - Staff demonstration', te: 'క్యూఈజ్ - సిబ్బంది ప్రదర్శన' },
-    doc_title_display: { en: 'QueueEase - Now serving display', te: 'క్యూఈజ్ - ప్రస్తుత సేవా ప్రదర్శన' },
-
-    /* ---------------- demo banner ---------------- */
-    banner_tag: { en: 'Demo prototype', te: 'డెమో నమూనా' },
-    banner_text: {
-      en: 'Demonstration only. No real appointment is confirmed. Data stays in this browser. Do not enter Aadhaar, ID numbers or sensitive details.',
-      te: 'కేవలం ప్రదర్శన మాత్రమే. నిజమైన అపాయింట్‌మెంట్ నిర్ధారించబడదు. సమాచారం ఈ బ్రౌజర్‌లోనే ఉంటుంది. ఆధార్, ID నంబర్లు లేదా సున్నితమైన వివరాలు నమోదు చేయవద్దు.'
-    },
+    doc_title_citizen: { en: 'QueueManager - Book an appointment', te: 'క్యూఈజ్ - డెమో అపాయింట్‌మెంట్ బుక్ చేయండి' },
+    doc_title_staff: { en: 'QueueManager - Staff demonstration', te: 'క్యూఈజ్ - సిబ్బంది ప్రదర్శన' },
+    doc_title_display: { en: 'QueueManager - Now serving display', te: 'క్యూఈజ్ - ప్రస్తుత సేవా ప్రదర్శన' },
 
     /* ---------------- citizen hero ---------------- */
     hero_eyebrow: { en: 'Community Service Internship demonstration', te: 'కమ్యూనిటీ సర్వీస్ ఇంటర్న్‌షిప్ ప్రదర్శన' },
     hero_title: { en: 'Book a token. Skip the long queue.', te: 'టోకెన్ బుక్ చేయండి. పొడవైన క్యూను దాటండి.' },
     hero_lead: {
-      en: 'Choose a demo service counter, pick a date and time slot, and receive a queue token. Follow your status online instead of standing in line.',
-      te: 'డెమో సేవా కౌంటర్‌ను ఎంచుకోండి, తేదీ మరియు సమయాన్ని ఎంచుకోండి, క్యూ టోకెన్ పొందండి. వరుసలో నిలబడకుండా మీ స్థితిని ఆన్‌లైన్‌లో తెలుసుకోండి.'
+      en: 'Choose a service counter, pick a date and time slot, and receive a queue token. Follow your status online instead of standing in line.',
+      te: 'డెమో సేవా కౌంటర్‌ను ఎంచుకోండి, తేదీ మరియు సమయాన్ని ఎంచుకోండి, క్యూ టోకెన్ పొందండి. వరుసలో నిలబడకుండా మీ స్థితిని ఆన్‌లైన్‌లో తెలుసుకోંడి.'
     },
     hero_cta_book: { en: 'Book an appointment', te: 'అపాయింట్‌మెంట్ బుక్ చేయండి' },
-    hero_cta_staff: { en: 'Open staff demo', te: 'సిబ్బంది డెమో తెరవండి' },
+    hero_cta_staff: { en: 'Open staff page', te: 'సిబ్బంది పేజీ తెరవండి' },
     hero_storage_note: {
-      en: 'Saved only in this browser. Demo queues do not sync between phones or computers.',
+      en: 'Saved only in this browser. Queues do not sync between phones or computers.',
       te: 'ఈ బ్రౌజర్‌లో మాత్రమే భద్రపరచబడుతుంది. డెమో క్యూలు ఫోన్లు లేదా కంప్యూటర్ల మధ్య సమకాలీకరించబడవు.'
     },
 
@@ -56,11 +49,11 @@
     summary_all_note: { en: 'Counts across every demo record in this browser.', te: 'ఈ బ్రౌజర్‌లోని అన్ని డెమో రికార్డుల గణనలు.' },
     stat_cancelled: { en: 'Cancelled', te: 'రద్దయినవి' },
     stat_noshow: { en: 'No-show', te: 'హాజరు కానివి' },
-    stats_today_note: { en: 'Counts for today across all demo counters.', te: 'అన్ని డెమో కౌంటర్లలో ఈరోజు గణనలు.' },
+    stats_today_note: { en: 'Counts for today across all counters.', te: 'అన్ని కౌంటర్లలో ఈరోజు గణనలు.' },
 
     /* ---------------- offices ---------------- */
-    offices_eyebrow: { en: 'Demo counters', te: 'డెమో కౌంటర్లు' },
-    offices_title: { en: 'Choose a demo office', te: 'డెమో కార్యాలయాన్ని ఎంచుకోండి' },
+    offices_eyebrow: { en: 'Counters', te: 'కౌంటర్లు' },
+    offices_title: { en: 'Choose a office', te: 'డెమో కార్యాలయాన్ని ఎంచుకోండి' },
     offices_sub: {
       en: 'Four fictional public-service counters for demonstration. Real offices are not connected.',
       te: 'ప్రదర్శన కోసం నాలుగు కల్పిత ప్రజా సేవా కౌంటర్లు. నిజమైన కార్యాలయాలు అనుసంధానించబడలేదు.'
@@ -74,7 +67,7 @@
 
     /* ---------------- booking form ---------------- */
     book_eyebrow: { en: 'Reserve a place', te: 'స్థానం రిజర్వ్ చేయండి' },
-    book_title: { en: 'Book a demo appointment', te: 'డెమో అపాయింట్‌మెంట్ బుక్ చేయండి' },
+    book_title: { en: 'Book an appointment', te: 'అపాయింట్‌మెంట్ బుక్ చేయండి' },
     book_sub: { en: 'Takes less than a minute. You get a token instantly.', te: 'నిమిషం కంటే తక్కువ సమయం పడుతుంది. వెంటనే టోకెన్ పొందుతారు.' },
     f_office: { en: 'Office', te: 'కార్యాలయం' },
     f_service: { en: 'Service', te: 'సేవ' },
@@ -88,7 +81,7 @@
     choose_slot: { en: 'Choose a slot', te: 'స్లాట్ ఎంచుకోండి' },
     slots_left_n: { en: '{n} places left', te: '{n} స్థానాలు మిగిలి ఉన్నాయి' },
     slot_full: { en: 'Full', te: 'నిండింది' },
-    date_range_hint: { en: 'Demo bookings open from {min} to {max}.', te: 'డెమో బుకింగులు {min} నుండి {max} వరకు.' },
+    date_range_hint: { en: 'Bookings open from {min} to {max}.', te: 'బుకింగులు {min} నుండి {max} వరకు.' },
     closed_day_note: { en: 'This office is closed on the selected date. Pick another date.', te: 'ఎంచుకున్న తేదీన ఈ కార్యాలయం మూసి ఉంటుంది. మరో తేదీ ఎంచుకోండి.' },
     f_name: { en: 'Display name or alias', te: 'ప్రదర్శన పేరు లేదా మారుపేరు' },
     name_hint: {
@@ -147,12 +140,12 @@
     msg_ARCHIVED: { en: 'Token {token} was archived.', te: 'టోకెన్ {token} ఆర్కైవ్ చేయబడింది.' },
 
     /* ---------------- how it works ---------------- */
-    how_title: { en: 'How the demo works', te: 'డెమో ఎలా పనిచేస్తుంది' },
+    how_title: { en: 'How the works', te: 'ఎలా పనిచేస్తుంది' },
     how_sub: { en: 'Follow these steps to try the full citizen-to-staff flow.', te: 'పౌరుడి నుండి సిబ్బంది వరకు పూర్తి ప్రవాహాన్ని ప్రయత్నించడానికి ఈ దశలను అనుసరించండి.' },
     step1: { en: 'Open the citizen page and choose an office and service.', te: 'పౌరుల పేజీ తెరిచి కార్యాలయం, సేవను ఎంచుకోండి.' },
     step2: { en: 'Pick a date and an available time slot.', te: 'తేదీ మరియు అందుబాటులో ఉన్న సమయాన్ని ఎంచుకోండి.' },
     step3: { en: 'Receive a unique token and reference.', te: 'ప్రత్యేక టోకెన్ మరియు రిఫరెన్స్ పొందండి.' },
-    step4: { en: 'Open the staff demo.', te: 'సిబ్బంది డెమో తెరవండి.' },
+    step4: { en: 'Open the staff page.', te: 'సిబ్బంది పేజీ తెరవండి.' },
     step5: { en: 'Call the token and change its status.', te: 'టోకెన్‌ను పిలిచి దాని స్థితిని మార్చండి.' },
     step6: { en: 'Complete the appointment.', te: 'అపాయింట్‌మెంట్‌ను పూర్తి చేయండి.' },
     step7: { en: 'Watch the dashboard counts update.', te: 'డాష్‌బోర్డ్ గణనలు మారడం చూడండి.' },
@@ -196,23 +189,23 @@
     appt_badge: { en: 'Appointment', te: 'అపాయింట్‌మెంట్' },
     ahead_n: { en: '{n} ahead', te: '{n} ముందు' },
     est_n: { en: 'About {m} min', te: 'సుమారు {m} నిమి' },
-    tools_title: { en: 'Demo tools', te: 'డెమో సాధనాలు' },
+    tools_title: { en: 'Tools', te: 'సాధనాలు' },
     btn_walkin_new: { en: 'New walk-in token', te: 'కొత్త వాక్-ఇన్ టోకెన్' },
     walkin_title: { en: 'Create a walk-in token', te: 'వాక్-ఇన్ టోకెన్ సృష్టించండి' },
     walkin_sub: { en: 'Issued for today at the selected office. No date or slot needed.', te: 'ఎంచుకున్న కార్యాలయంలో ఈరోజుకు జారీ చేస్తారు. తేదీ లేదా స్లాట్ అవసరం లేదు.' },
     btn_export_csv: { en: 'Export CSV', te: 'CSV ఎగుమతి' },
     btn_export_json: { en: 'Export JSON', te: 'JSON ఎగుమతి' },
-    btn_load_demo: { en: 'Load sample demo data', te: 'నమూనా డెమో డేటా లోడ్ చేయండి' },
-    btn_reset: { en: 'Reset demo data', te: 'డెమో డేటా రీసెట్ చేయండి' },
-    reset_title: { en: 'Reset demo data?', te: 'డెమో డేటాను రీసెట్ చేయాలా?' },
+    btn_load_demo: { en: 'Load sample data', te: 'నమూనా డేటా లోడ్ చేయండి' },
+    btn_reset: { en: 'Reset data', te: 'డేటా రీసెట్ చేయండి' },
+    reset_title: { en: 'Reset data?', te: 'డేటాను రీసెట్ చేయాలా?' },
     reset_body: {
-      en: 'This permanently deletes every demo record in this browser, including tokens you just created. This cannot be undone.',
-      te: 'ఇది మీరు ఇప్పుడే సృష్టించిన టోకెన్లతో సహా ఈ బ్రౌజర్‌లోని అన్ని డెమో రికార్డులను శాశ్వతంగా తొలగిస్తుంది. దీన్ని రద్దు చేయలేరు.'
+      en: 'This permanently deletes every record in this browser, including tokens you just created. This cannot be undone.',
+      te: 'ఇది మీరు ఇప్పుడే సృష్టించిన టోకెన్లతో సహా ఈ బ్రౌజర్‌లోని అన్ని రికార్డులను శాశ్వతంగా తొలగిస్తుంది. దీన్ని రద్దు చేయలేరు.'
     },
     reset_type: { en: 'Type RESET to confirm', te: 'నిర్ధారించడానికి RESET అని టైప్ చేయండి' },
     reset_confirm: { en: 'Delete all demo records', te: 'అన్ని డెమో రికార్డులను తొలగించండి' },
     btn_keep: { en: 'Keep my data', te: 'నా డేటాను ఉంచండి' },
-    settings_title: { en: 'Demo settings', te: 'డెమో సెట్టింగులు' },
+    settings_title: { en: 'Settings', te: 'సెట్టింగులు' },
     settings_sub: {
       en: 'Average service time drives the illustrative wait estimate. Changes apply to new estimates only.',
       te: 'సగటు సేవా సమయం అంచనా వేచి ఉండే సమయాన్ని నిర్ణయిస్తుంది. మార్పులు కొత్త అంచనాలకు మాత్రమే వర్తిస్తాయి.'
@@ -229,14 +222,14 @@
     'st_No-show': { en: 'No-show', te: 'హాజరు కాలేదు' },
 
     /* ---------------- engine messages ---------------- */
-    err_OFFICE_INVALID: { en: 'Choose a demo office.', te: 'డెమో కార్యాలయాన్ని ఎంచుకోండి.' },
+    err_OFFICE_INVALID: { en: 'Choose a office.', te: 'కార్యాలయాన్ని ఎంచుకోండి.' },
     err_SERVICE_INVALID: { en: 'Choose a service.', te: 'సేవను ఎంచుకోండి.' },
     err_SERVICE_OFFICE_MISMATCH: { en: 'That service does not belong to the selected office.', te: 'ఆ సేవ ఎంచుకున్న కార్యాలయానికి చెందినది కాదు.' },
     err_NAME_REQUIRED: { en: 'Enter a display name or alias.', te: 'ప్రదర్శన పేరు లేదా మారుపేరు నమోదు చేయండి.' },
     err_NAME_INVALID: { en: 'Use 2-40 letters, spaces, dots or hyphens. Do not enter ID numbers.', te: '2-40 అక్షరాలు, ఖాళీలు, చుక్కలు లేదా హైఫన్లు వాడండి. ID నంబర్లు నమోదు చేయవద్దు.' },
     err_DATE_INVALID: { en: 'Choose a valid date.', te: 'చెల్లుబాటు అయ్యే తేదీని ఎంచుకోండి.' },
     err_DATE_PAST: { en: 'The chosen date is in the past.', te: 'ఎంచుకున్న తేదీ గతంలో ఉంది.' },
-    err_DATE_TOO_FAR: { en: 'Demo bookings open for the next {days} days only.', te: 'డెమో బుకింగులు కేవలం తదుపరి {days} రోజులకు మాత్రమే.' },
+    err_DATE_TOO_FAR: { en: 'Bookings open for the next {days} days only.', te: 'బుకింగులు కేవలం తదుపరి {days} రోజులకు మాత్రమే.' },
     err_OFFICE_CLOSED: { en: 'The selected office is closed on that date.', te: 'ఎంచుకున్న కార్యాలయం ఆ తేదీన మూసి ఉంటుంది.' },
     err_TIME_INVALID: { en: 'Choose a valid time slot.', te: 'చెల్లుబాటు అయ్యే సమయ స్లాట్‌ను ఎంచుకోండి.' },
     err_TIME_PAST: { en: 'That slot has already started today. Choose a later slot.', te: 'ఆ స్లాట్ ఈరోజు ఇప్పటికే ప్రారంభమైంది. తర్వాతి స్లాట్‌ను ఎంచుకోండి.' },
@@ -260,10 +253,10 @@
     err_TRANSITION_INVALID: { en: 'A {from} token cannot be changed to {to}.', te: '{from} స్థితిలోని టోకెన్‌ను {to} గా మార్చలేరు.' },
     msg_CALLED: { en: 'Now serving token {token}.', te: 'టోకెన్ {token} కు ఇప్పుడు సేవ జరుగుతోంది.' },
     msg_UPDATED: { en: 'Token {token} is now {status}.', te: 'టోకెన్ {token} ఇప్పుడు {status}.' },
-    msg_CREATED: { en: 'Demo token created: {token}. This is not a real appointment.', te: 'డెమో టోకెన్ సృష్టించబడింది: {token}. ఇది నిజమైన అపాయింట్‌మెంట్ కాదు.' },
+    msg_CREATED: { en: 'Token created: {token}. This is not a real appointment.', te: 'టోకెన్ సృష్టించబడింది: {token}. ఇది నిజమైన అపాయింట్‌మెంట్ కాదు.' },
     msg_EXPORTED: { en: 'Downloaded {file} with {n} records.', te: '{n} రికార్డులతో {file} డౌన్‌లోడ్ అయింది.' },
     msg_SETTINGS_SAVED: { en: 'Settings saved.', te: 'సెట్టింగులు భద్రపరచబడ్డాయి.' },
-    msg_RESET_DONE: { en: 'Demo data cleared.', te: 'డెమో డేటా తొలగించబడింది.' },
+    msg_RESET_DONE: { en: 'Data cleared.', te: 'డేటా తొలగించబడింది.' },
     msg_DEMO_LOADED: { en: 'Sample demo data loaded.', te: 'నమూనా డెమో డేటా లోడ్ అయింది.' },
     msg_REMOVED: { en: 'Record removed from this browser.', te: 'రికార్డు ఈ బ్రౌజర్ నుండి తొలగించబడింది.' },
 
@@ -330,7 +323,7 @@
 
     /* ---------------- footer ---------------- */
     foot_about: {
-      en: 'QueueEase is a Community Service Internship (CSI) demonstration for public-service queue management. No real-provider pilot or measured impact is claimed.',
+      en: 'QueueManager is a Community Service Internship (CSI) demonstration for public-service queue management. No real-provider pilot or measured impact is claimed.',
       te: 'క్యూఈజ్ అనేది ప్రజా సేవా క్యూ నిర్వహణ కోసం కమ్యూనיטీ సర్వీస్ ఇంటర్న్‌షిప్ (CSI) ప్రదర్శన. నిజమైన సంస్థ భాగస్వామ్యం లేదా కొలిచిన ప్రభావం గురించి ఎటువంటి వాదన లేదు.'
     },
     foot_storage: {
@@ -340,6 +333,10 @@
     foot_nogov: {
       en: 'A student prototype. Not affiliated with, endorsed or approved by any government department.',
       te: 'విద్యార్థి నమూనా. ఏ ప్రభుత్వ శాఖతో అనుబంధం, ఆమోదం లేదా మద్దతు లేదు.'
+    },
+    foot_copyright: {
+      en: 'Copyright © 2024, Community Service Internship (CSI) team. All rights reserved.',
+      te: 'కాపీరైట్ © 2024, కమ్యూనిటీ సర్వీస్ ఇంటర్న్‌షిప్ (CSI) బృందం. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.'
     }
   };
 

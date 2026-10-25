@@ -1,4 +1,4 @@
-/* QueueEase - shared headless-Chrome CDP harness (no npm dependencies).
+/* QueueManager - shared headless-Chrome CDP harness (no npm dependencies).
  * Used by tests/e2e.js (local static mode) and tests/e2e-server.js
  * (backend integration mode).
  */

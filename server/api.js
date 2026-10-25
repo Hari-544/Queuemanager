@@ -1,4 +1,4 @@
-/* QueueEase backend - REST API (Node stdlib http).
+/* QueueManager backend - REST API (Node stdlib http).
  *
  * Business rules are NOT re-implemented here: validation, token ordering,
  * transitions and estimates all come from assets/js/queue.js, the same
@@ -667,7 +667,7 @@ function createApi(store, env, hooks) {
             res.writeHead(200, { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Length': body.length, 'Content-Disposition': 'attachment; filename="queueease-export.csv"' });
             res.end(body);
           } else {
-            sendJson(res, 200, { app: 'QueueEase server export', exportedAt: new Date().toISOString(), entries: rows });
+            sendJson(res, 200, { app: 'QueueManager server export', exportedAt: new Date().toISOString(), entries: rows });
           }
           break;
         }

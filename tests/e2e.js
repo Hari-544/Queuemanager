@@ -1,4 +1,4 @@
-/* QueueEase - headless-Chrome end-to-end test (no npm dependencies).
+/* QueueManager - headless-Chrome end-to-end test (no npm dependencies).
  * Drives the real UI over CDP: citizen booking -> token -> tracking ->
  * staff call-next -> complete -> counts -> CSV export -> reset.
  * Usage: node tests/e2e.js

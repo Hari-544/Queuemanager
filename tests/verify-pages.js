@@ -1,4 +1,4 @@
-/* QueueEase - static cross-checks: HTML ids/keys referenced by JS must exist,
+/* QueueManager - static cross-checks: HTML ids/keys referenced by JS must exist,
  * every i18n key used must be defined, every engine code must be localised. */
 'use strict';
 

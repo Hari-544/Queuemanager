@@ -1,5 +1,5 @@
 /*
- * QueueEase - backend API client (browser).
+ * QueueManager - backend API client (browser).
  * Same-origin fetch with credentials (session cookie). When no backend is
  * reachable the pages stay in local demo mode (localStorage engine).
  */

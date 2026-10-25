@@ -1,4 +1,4 @@
-# QueueEase — test record
+# QueueManager — test record
 
 All checks below were **actually run** on Windows (Node v24.15.0, headless
 Chrome). Nothing in this file is assumed or extrapolated.

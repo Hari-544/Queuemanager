@@ -1,4 +1,4 @@
-/* QueueEase - storage adapter tests (in-memory store). */
+/* QueueManager - storage adapter tests (in-memory store). */
 'use strict';
 
 const CFG = require('../assets/js/config.js');
